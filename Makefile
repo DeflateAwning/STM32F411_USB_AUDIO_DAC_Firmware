@@ -22,8 +22,8 @@ C_DEFS =  \
 -DUSE_HAL_DRIVER \
 -DUSE_FULL_ASSERT \
 -D$(CPU_TARGET) \
--D$(DAC_TARGET)
-#-DDEBUG_FEEDBACK_ENDPOINT 
+-D$(DAC_TARGET) \
+-DDEBUG_FEEDBACK_ENDPOINT 
 #-DUSE_MCLK_OUT 
 # Note : MCLK output is only possible on F411 mcu
 
@@ -57,7 +57,7 @@ MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
 AS_DEFS = 
 AS_INCLUDES = 
 
-DEBUG = 0
+DEBUG = 1
 OPT = -O2
 
 BUILD_DIR = ./build
